@@ -1,6 +1,11 @@
 extends layout
 
 block content
-  h1 Error - #{title}
-  p #{error}
-    include docs/server
+  div(class="card")
+    div(class="card-header text-white bg-danger")
+      h1 Error - #{title}
+    div(class="card-body")
+      p #{error}
+      hr
+      h3 Documentation
+      include docs/server

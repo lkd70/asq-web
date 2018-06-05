@@ -37,3 +37,11 @@ li p {
 	display: inline;
 	padding-left: 15px;
 }
+
+.bg-dark a {
+	color: #80FAFA;
+}
+
+.bg-dark a:hover {
+	color: #70DEDE;
+}

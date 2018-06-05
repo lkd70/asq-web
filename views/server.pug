@@ -3,15 +3,18 @@ extends layout
 block content
   if auto
     meta(http-equiv="refresh" content=time)
-  h1= title
-  h5 Players online: #{playercount}
-  table(class='table')
-    thead
-      tr
-        th Name
-        th Time Online (Hours:Minutes)
-    tbody
-      each player in players
-        tr
-          td= player.name
-          td= player.time
+  div(class="card")
+    div(class="card-header  text-white bg-primary")
+      h3(class="card-title") #{title}
+    div(class="card-body text-white bg-dark")
+      h5(class="card-text") Players online: #{playercount}
+      table(class='table')
+        thead
+          tr
+            th Name
+            th Time Online (Hours:Minutes)
+        tbody
+          each player in players
+            tr
+              td= player.name
+              td= player.time
