@@ -1,0 +1,29 @@
+{
+  "name": "asq-web",
+  "version": "0.1.0",
+  "description": "Ark Server Query - Web",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkd70/asq-web.git"
+  },
+  "keywords": [
+    "LKD70",
+    "Ark",
+    "ServerQuery"
+  ],
+  "author": "LKD70",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "gamedig": "^1.0.46",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11"
+  }
+}

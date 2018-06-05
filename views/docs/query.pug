@@ -1,0 +1,49 @@
+div(class='card mb-3 border-primary')
+  div(class="card-header text-white bg-primary")
+    h4(class='card-title' style="display: inline-block;") [GET] /query/#{'<IP>'}/#{'<PORT>'}/[auto]/[time]
+    button(class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target="#query" aria-expanded="true" aria-controls="query") Expand
+  div(class="collapse" id="query")
+    div(class="card-body")
+      p(class='card-text') In addition to these parameters, you can add ?json=true to have the result returned in JSON format.
+      table(class='table')
+        thead
+          th Parameter
+          th Example
+          th Description
+          th Optional
+        tbody
+          tr
+            td IP
+            td 123.123.123.123
+            td IP address of the server to query.
+            td No
+          tr
+            td PORT
+            td 27015
+            td Port of the server to query.
+            td No
+          tr
+            td auto
+            td auto
+            td Automatically refreshes the page. Default time is 10 seconds. Custom time can be defined using the 'time' parameter.
+            td Yes
+          tr
+            td time
+            td 60
+            td Custom time to refresh (in seconds). To be used with the 'auto' parameter.
+            td Yes
+      h5 Examples
+      table(class="table")
+        tbody
+          tr
+            td
+              a(href="/query/85.190.157.159/27021") /query/85.190.157.159/27021
+            td Returns player information about the server at 85.190.157.159:27021.
+          tr
+            td
+              a(href="/query/85.190.157.159/27021/auto") /query/85.190.157.159/27021/auto
+            td returns server info for server at 85.190.157.159:27021 and updates the information every 10 seconds.
+          tr
+            td
+              a(href="/query/85.190.157.159/27021/auto/60") /query/85.190.157.159/27021/auto/60
+            td returns server info for server at 85.190.157.159:27021 and updates the information every 60 seconds.

@@ -1,0 +1,44 @@
+div(class='card mb-3 border-primary')
+  div(class="card-header text-white bg-primary")
+    h4(class='card-title' style="display: inline-block;") [GET] /server/#{'<ID>'}/[auto]/[time]
+    button(class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target="#server" aria-expanded="true" aria-controls="server") Expand
+  div(class="collapse" id="server")
+    div(class="card-body")
+      p(class='card-text') In addition to these parameters, you can add ?json=true to have the result returned in JSON format.
+      table(class='table')
+        thead
+          th Parameter
+          th Example
+          th Description
+          th Optional
+        tbody
+          tr
+            td ID
+            td d25
+            td Server ID consisting of the last letter of the map name and the server number.
+            td No
+          tr
+            td auto
+            td auto
+            td Automatically refreshes the page. Default time is 10 seconds. Custom time can be defined using the 'time' parameter.
+            td Yes
+          tr
+            td time
+            td 60
+            td Custom time to refresh (in seconds). To be used with the 'auto' parameter.
+            td Yes
+      h5 Examples
+      table(class="table")
+        tbody
+          tr
+            td
+              a(href="/server/d25") /server/d25
+            td Returns player information about server TheIsland25.
+          tr
+            td
+              a(href="/server/d25/auto") /server/d25/auto
+            td returns server info for server TheIsland25 and updates the information every 10 seconds.
+          tr
+            td
+              a(href="/server/d25/auto/60") /server/d25/auto/60
+            td returns server info for server TheIsland25 and updates the information every 60 seconds.

@@ -1,0 +1,7 @@
+| {"count":#{playercount},
+| "players": [
+each player in players
+  | {"name": "#{player.name}", "time": "#{player.time}"}
+  if (player !== players[players.length-1])
+    | ,
+| ]}
