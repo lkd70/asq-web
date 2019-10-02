@@ -1,4 +1,4 @@
 # asq-web
 Ark Server Query - Web
 
-placeholder
+asq.lkd70.io
